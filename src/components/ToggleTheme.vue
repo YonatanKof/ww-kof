@@ -5,10 +5,24 @@
         @click.prevent="toggleTheme"
         class="toggle-theme"
     >
-        <IconBase v-if="darkTheme" height="32" width="32" icon-name="flip-theme-bright" icon-color="var(--link-color)">
+        <IconBase
+            class="toggle-theme__icon"
+            v-if="darkTheme"
+            height="28"
+            width="28"
+            icon-name="flip-theme-bright"
+            icon-color="var(--link-color)"
+        >
             <IconBright />
         </IconBase>
-        <IconBase v-else height="32" width="32" icon-name="flip-theme-dark" icon-color="var(--link-color)">
+        <IconBase
+            class="toggle-theme__icon"
+            v-else
+            height="28"
+            width="28"
+            icon-name="flip-theme-dark"
+            icon-color="var(--link-color)"
+        >
             <IconDark />
         </IconBase>
     </button>
@@ -44,6 +58,10 @@ export default {
 </script>
 
 <style lang="scss">
+.toggle-theme, .toggle-theme__icon {
+    width: var(--space-xl);
+    height: var(--space-xl);
+}
 .toggle-theme {
     background-color: transparent;
     border: 0;
