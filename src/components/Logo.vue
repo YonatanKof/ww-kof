@@ -1,5 +1,5 @@
 <template>
-    <g-link class="logo" to="/">Index</g-link>
+    <g-link class="logo" to="/"><em>Index</em></g-link>
 </template>
 
 

@@ -1,5 +1,5 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;500;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inknut+Antiqua:wght@400;600;700;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap");
 
 :root {
@@ -9,7 +9,7 @@
   --font-family--code: "Source Code Pro", Consolas, Monaco, "Andale Mono", "Ubuntu Mono", monospace;
 
   --font-wight--regular: 400;
-  --font-wight--bold: 500;
+  --font-wight--bold: 600;
   --font-wight--bolder: 700;
   --font-wight--black: 900;
   //
@@ -114,7 +114,6 @@ small {
 
 em {
   font-weight: var(--font-wight--bold);
-  font-style: italic;
 }
 strong {
   font-weight: var(--font-wight--bolder);
