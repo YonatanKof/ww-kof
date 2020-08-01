@@ -1,5 +1,6 @@
 ---
 title: Say hello to Gridsome 🎉
+author_name: Yonatan Ben Knnan
 urlname: hello-gridsome
 date: 2019-02-07
 updated: 2019-02-07

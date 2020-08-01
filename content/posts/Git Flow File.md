@@ -1,5 +1,6 @@
 ---
 title: Git Flow Title
+author_name: Yonatan Ben Knnan
 urlname: git-flow-slug
 date: 2020-04-27
 updated: 2020-04-27

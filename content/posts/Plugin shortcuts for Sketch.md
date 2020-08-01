@@ -1,5 +1,6 @@
 ---
 title: Plugin shortcuts for Sketch
+author_name: Yonatan Ben Knnan
 urlname: plugin-shortcuts-for-sketch
 date: 2020-07-12
 updated: 2019-02-06

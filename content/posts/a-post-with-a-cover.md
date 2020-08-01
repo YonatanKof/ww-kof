@@ -1,5 +1,6 @@
 ---
 title: A post with a cover image
+author_name: Yonatan Ben Knnan
 urlname: post-w-cover
 date: 2019-01-07
 updated: 2019-01-07
