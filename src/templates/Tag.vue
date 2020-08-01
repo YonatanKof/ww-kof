@@ -47,7 +47,7 @@ export default {
         PostCard
     },
     metaInfo: {
-        title: "Hello, world!"
+        title: "Post tags by Yonatan Ben Knaan",
     }
 };
 </script>

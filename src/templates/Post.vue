@@ -42,10 +42,10 @@ export default {
     },
     metaInfo() {
         return {
-            title: this.$page.post.title,
+            title: this.$page.post.title + ' by ' + this.$page.post.author_name,
             meta: [
                 {
-                    name: this.$page.post.author_name,
+                    name: "description",
                     content: this.$page.post.description
                 }
             ]
@@ -58,8 +58,8 @@ export default {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
-    author_name
     path
+    author_name
     date (format: "MMM D, YYYY")
     timeToRead
     tags {

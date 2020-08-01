@@ -51,7 +51,7 @@ export default {
         KofIcon
     },
     metaInfo: {
-        title: "Hello, world!"
+        title: "Posts by Yonatan Ben Knaan"
     }
 };
 </script>
