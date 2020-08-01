@@ -5,14 +5,14 @@ $color-bg-O75: transparentize($color-bg-base, 0.1);
 $color-bg-O50: transparentize($color-bg-base, 0.5);
 $color-bg-O25: transparentize($color-bg-base, 0.75);
 
-$color-fg-base: hsl(60, 50%, 8%); // should be darker then
+$color-fg-base: hsl(60, 30%, 7%); // should be darker then
 $color-fg-light: lighten($color-fg-base, 4%);
 $color-fg-dark: darken($color-fg-base, 25%);
-$color-fg-O80: transparentize($color-fg-base, 0.25);
-$color-fg-O60: transparentize($color-fg-base, 0.55);
-$color-fg-O40: transparentize($color-fg-base, 0.88);
-$color-fg-O20: transparentize($color-fg-base, 0.93);
-$color-fg-O10: transparentize($color-fg-base, 0.97);
+$color-fg-O80: transparentize($color-fg-light, 0.25);
+$color-fg-O60: transparentize($color-fg-light, 0.55);
+$color-fg-O40: transparentize($color-fg-light, 0.88);
+$color-fg-O20: transparentize($color-fg-light, 0.93);
+$color-fg-O10: transparentize($color-fg-light, 0.97);
 
 $color-primary-base: hsl(290, 100%, 38%); // should be darker then
 $color-primary-light: lighten($color-primary-base, 10%);
@@ -40,7 +40,7 @@ body[data-theme="dark"] {
     // Colors -- BG
     --bg-color: #{$color-fg-light};
     --bg-content-color: #{$color-fg-base};
-    --bg-code: #{$color-fg-dark};
+    --bg-code: #{$color-fg-O60};
     --bg-pre: #{$color-fg-dark};
     --border-color: #{$color-bg-O25};
     

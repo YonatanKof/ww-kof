@@ -1,8 +1,8 @@
 <template>
     <div class="post-meta">
-        Written by <strong>{{ post.author_name }}</strong> • Posted {{ post.date }} •
+        Written by <em>{{ post.author_name }}</em> • Posted {{ post.date }} •
         <template v-if="post.timeToRead">
-            <strong>{{ post.timeToRead }} min read.</strong>
+            <em>{{ post.timeToRead }} min read.</em>
         </template>
     </div>
 </template>
