@@ -45,7 +45,7 @@ export default {
             title: this.$page.post.title,
             meta: [
                 {
-                    name: "description",
+                    name: this.$page.post.author_name,
                     content: this.$page.post.description
                 }
             ]
@@ -58,8 +58,9 @@ export default {
 query Post ($id: ID!) {
   post: post (id: $id) {
     title
+    author_name
     path
-    date (format: "D. MMMM YYYY")
+    date (format: "MMM D, YYYY")
     timeToRead
     tags {
       id

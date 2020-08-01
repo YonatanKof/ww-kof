@@ -19,6 +19,7 @@ query {
       node {
         id
         title
+        author_name
         date (format: "D. MMMM YYYY")
         timeToRead
         description
