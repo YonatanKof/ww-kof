@@ -1,0 +1,56 @@
+$color-bg-base: hsl(60, 75%, 94%); // should be darker then
+$color-bg-light: lighten($color-bg-base, 25%);
+$color-bg-dark: darken($color-bg-base, 10%);
+$color-bg-O75: transparentize($color-bg-base, 0.1);
+$color-bg-O50: transparentize($color-bg-base, 0.5);
+$color-bg-O25: transparentize($color-bg-base, 0.75);
+
+$color-fg-base: hsl(60, 50%, 8%); // should be darker then
+$color-fg-light: lighten($color-fg-base, 4%);
+$color-fg-dark: darken($color-fg-base, 25%);
+$color-fg-O80: transparentize($color-fg-base, 0.25);
+$color-fg-O60: transparentize($color-fg-base, 0.55);
+$color-fg-O40: transparentize($color-fg-base, 0.88);
+$color-fg-O20: transparentize($color-fg-base, 0.93);
+$color-fg-O10: transparentize($color-fg-base, 0.97);
+
+$color-primary-base: hsl(290, 100%, 38%); // should be darker then
+$color-primary-light: lighten($color-primary-base, 10%);
+$color-primary-dark: darken($color-primary-base, 15%);
+$color-primary-O50: transparentize($color-primary-base, 0.5);
+
+// Light default theme
+body {
+    // Colors -- BG
+    --bg-color: #{$color-bg-base};
+    --bg-content-color: #{$color-bg-light};
+    --bg-code: #{$color-bg-O75};
+    --bg-pre: #{$color-fg-O10};
+    --border-color: #{$color-fg-O40};
+    
+    // Colors -- Typography
+    --title-color: #{$color-fg-light};
+    --body-color: #{$color-fg-base};
+    --link-color: #{$color-primary-base};
+    --link-color-highlight: #{$color-primary-O50};
+}
+
+// Override variables for Dark theme
+body[data-theme="dark"] {
+    // Colors -- BG
+    --bg-color: #{$color-fg-light};
+    --bg-content-color: #{$color-fg-base};
+    --bg-code: #{$color-fg-dark};
+    --bg-pre: #{$color-fg-dark};
+    --border-color: #{$color-bg-O25};
+    
+    // Colors -- Typography
+    --title-color: #{$color-bg-base};
+    --body-color: #{$color-bg-light};
+    --link-color: #{$color-primary-light};
+    --link-color-highlight: #{$color-primary-base};
+
+    // --title-color: #f2eeda;
+    // --body-color: #f2f0e6;
+    // --link-color: #de79f2;
+}

@@ -1,0 +1,32 @@
+// Default
+* {
+	box-sizing: border-box;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+body {
+	background-color: var(--bg-color);
+	color: var(--body-color);
+	transition: color 0.6s, background-color 0.6s;
+	margin: 0;
+	padding: 0;
+	line-height: 1.5;
+}
+
+// a:not(.button) {
+	
+// }
+
+img {
+	max-width: 100%;
+}
+hr {
+	border: 0;
+	height: 1px;
+	margin: var(--content-space) 0;
+	background: var(--border-color);
+}
+button{
+	padding: 0;
+}
