@@ -111,14 +111,9 @@ query Post ($id: ID!) {
         h6 {
             margin-top: var(--spacem-md);
         }
-        /* h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 :first-child {
+        :is(h1, h2, h3, h4, h5, h6):first-child {
             margin-top: 0;
-        } */
+        }
         img {
             width: calc(100% + var(--content-space) * 2);
             margin-left: calc(var(--content-space) * -1);
