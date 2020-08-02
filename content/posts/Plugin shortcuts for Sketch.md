@@ -42,11 +42,11 @@ Luckily we can remedy the situation (somehow) easily by creating our own custom 
 
 Firstly let's locate the plugin at hand. The easiest way is by opening the Sketch ***Preferences*** (`⌘`+`,`) and under the ***Plugins*** tab and click the ***Reveal Plugin Folder*** in the contextual menu. Another way is to navigate using the finder, usually to be found in this path ► Library  ► Application Support  ► com.bohemiancoding.sketch3 ► Plugins
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_01_-_Select_and_reveal_the_plugin_in_Finder.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_01_-_Select_and_reveal_the_plugin_in_Finder.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/01-Select_and_reveal_the_plugin_in_Finder.png](./images/plugin-shortcuts-for-sketch/01-Select_and_reveal_the_plugin_in_Finder.png)
 
 A simple way to reveal the plugin folder is by using the ***Plugin*** tab in the ***Preferences*** 
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_menu_-_Start.png](./images/plugin-shortcuts-for-sketch/plugin_menu_-_Start.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_menu-Start.png](./images/plugin-shortcuts-for-sketch/plugin_menu-Start.png)
 
 No shortcut for *Color Contrast Analyser* plugin
 
@@ -58,13 +58,13 @@ Just to make sure where on the right page - plugins are files with the `.sketchp
 
 Once we're in the package content we'll look for a file called `manifest.js`, usually to be found in ► Contents ► Sketch.  When you locate it open it using a text editor - I'm using VS code but you can use TextEdit or whatever text/code editor you like.
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_04_-_Find_the_relevant_command.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_04_-_Find_the_relevant_command.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/04-Find_the_relevant_command.png](./images/plugin-shortcuts-for-sketch/04-Find_the_relevant_command.png)
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_02_-_Click_on_Show_Package_Content_from_the_contextual_menu.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_02_-_Click_on_Show_Package_Content_from_the_contextual_menu.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/02-Click_on_Show_Package_Content_from_the_contextual_menu.png](./images/plugin-shortcuts-for-sketch/02-Click_on_Show_Package_Content_from_the_contextual_menu.png)
 
 Sketch plugin folder in Finder
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_03_-_Find_and_open_manifest.js_in_an_editor.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_03_-_Find_and_open_manifest.js_in_an_editor.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/03-Find_and_open_manifest.js_in_an_editor.png](./images/plugin-shortcuts-for-sketch/03-Find_and_open_manifest.js_in_an_editor.png)
 
 The package content and the `manifest.js` file
 
@@ -97,11 +97,11 @@ Either way we're looking for this pattern → in this example there are 2 comman
 
 We can see that the example and the screenshot aren't identical, its OK, they don't have to be, every developer writes the plugin a bit differently. 
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_05_-_Add_shortcut_string_and_save_file.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_05_-_Add_shortcut_string_and_save_file.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/05-Add_shortcut_string_and_save_file.png](./images/plugin-shortcuts-for-sketch/05-Add_shortcut_string_and_save_file.png)
 
 I've used the `ctrl` `option` `cmd` `shift` `c` combo to get plugin running, but you can use any modifier key combination you'd like. Save the file and now the shortcut should be available in Sketch
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_menu_-_End.png](./images/plugin-shortcuts-for-sketch/Plugin_menu_-_End.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_menu-End.png](./images/plugin-shortcuts-for-sketch/Plugin_menu-End.png)
 
 Now we can see the shortcut in the plugin select menu
 
@@ -158,7 +158,7 @@ Or by removing the *key/value pair* altogether
 ]
 ```
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_Extra_-_Multiple_commands.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_Extra_-_Multiple_commands.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Extra-Multiple_commands.png](./images/plugin-shortcuts-for-sketch/Extra-Multiple_commands.png)
 
 I've removed all the shortcut for this [Comma](https://github.com/margusholland/Comma) plugin. I don't use that often and I needed the namespace.
 
@@ -170,7 +170,7 @@ Conversely, you can add a shortcut *key/value pair* if none exist, like in the c
 
 Mind the position of the `,` so you won't mess things up. The logic is simple - don't place a *comma* at the end of a curly bracket.
 
-![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Plugin_shortcut_-_Extra_-_Add_shortcut_to_command.png](./images/plugin-shortcuts-for-sketch/Plugin_shortcut_-_Extra_-_Add_shortcut_to_command.png)
+![Plugin%20shortcuts%20for%20Sketch%205622f6e00de142c1bb29f771267aa364/Extra-Add_shortcut_to_command.png](./images/plugin-shortcuts-for-sketch/Extra-Add_shortcut_to_command.png)
 
 Added shortcut for my popular commands in [Automate-Sketch](https://github.com/Ashung/Automate-Sketch) plugin.
 
