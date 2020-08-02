@@ -24,6 +24,7 @@ query Tag ($id: ID!) {
         node {
           ...on Post {
             title
+            author_name
             path
             date (format: "D. MMMM YYYY")
             timeToRead
