@@ -35,10 +35,8 @@ export default {
     margin: 0 auto;
     max-width: calc(var(--spacem-8xl) * 6);
     text-align: center;
-    padding-left: var(--content-space);
-    padding-right: var(--content-space);
-    padding-top: var(--spacem-md);
-    padding-bottom: var(--spacem-md);
+    padding: var(--spacem-md) var(--content-space);
+ 
     &__logo {
         width: calc(var(--spacem-7xl) * 2);
         height: calc(var(--spacem-7xl) * 2);
