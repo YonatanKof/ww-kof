@@ -15,26 +15,26 @@ export default {
 
 <style lang="scss">
 .post-tags {
-    margin: var(--space-md) 0 0;
+    margin-top: var(--space-md);
     display: flex;
-    flex-wrap: wrap;
-    gap: var(--space-xs);
-    span {
-        font-family: var(--font-family--body);
-    }
     &__link {
+        display: block;
         margin: 0;
+        margin-inline-end: var(--space-sm);
         font-family: var(--font-family--title);
         font-size: 0.8em;
         text-decoration: none;
         background-color: var(--bg-code);
-        padding: var(--spacem-md) var(--spacem-xl) ;
+        padding: var(--spacem-md) var(--spacem-xl);
         border-radius: var(--radius);
         transition: box-shadow 0.6s;
-            &:hover {
-                text-decoration: none;
-                box-shadow: var(--shadow-sm);
-    	}   
+        &:hover {
+            text-decoration: none;
+            box-shadow: var(--shadow-sm);
+        }
+        span {
+            font-family: var(--font-family--body);
+        }
     }
 }
 </style>
