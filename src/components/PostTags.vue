@@ -15,11 +15,12 @@ export default {
 
 <style lang="scss">
 .post-tags {
-    margin-top: var(--space-md);
     display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--space-sm);
     &__link {
+        margin: var(--space-sm) 0 0 0;
         display: block;
-        margin: 0;
         margin-inline-end: var(--space-sm);
         font-family: var(--font-family--title);
         font-size: 0.8em;
