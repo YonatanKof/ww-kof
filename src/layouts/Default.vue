@@ -59,10 +59,6 @@ query {
 .main {
     margin: 0 auto;
     padding: 0 var(--content-space);
-    @media screen and (max-width: 480px) {
-        // Remove padding on small screens
-        padding: 0;
-    }
 }
 .header {
     display: flex;
