@@ -1,5 +1,5 @@
 <template>
-    <Layout :show-logo="true" :show-posts="false">
+    <Layout :show-logo="true" :show-posts="true">
         <Author 
           :show-title="true" author-title="Posts" 
           :show-bio-text="true" author-bio="Some writing by the kof himself" 
