@@ -5,7 +5,7 @@
                 <Logo v-if="showLogo" />
             </div>
             <div class="header__right">
-                <g-link v-if="showPosts" class="nav__link" to="/posts/"><em>Posts</em></g-link>
+                <g-link v-if="showPosts" class="nav__link" to="/posts/">Posts</g-link>
             </div>
         </header>
         <main class="main">
@@ -72,14 +72,17 @@ query {
     padding: 0 var(--content-space);
     top: 0;
     z-index: 10;
-    a,
-    p {
-        margin: 0;
-    }
+    font-weight: var(--font-wight--bold);
     &__left,
+        a {
+            margin: 0;
+            margin-inline-end: var(--space-md);
+        }
     &__right {
-        display: flex;
-        gap: var(--space-md);
+        a {
+            margin: 0;
+            margin-inline-start: var(--space-md);
+        }
     }
     @media screen and (min-width: 1300px) {
         //Make header sticky for large screens
@@ -98,10 +101,10 @@ query {
     text-align: center;
     &__links {
         display: flex;
-        gap: var(--spacem-sm);
         align-items: center;
         a {
             margin: 0;
+            margin-inline-end: var(--spacem-sm);
         }
     }
     > span {
