@@ -68,7 +68,6 @@ query {
     padding: 0 var(--content-space);
     top: 0;
     z-index: 10;
-    font-weight: var(--font-wight--bold);
     &__left,
         a {
             margin: 0;
