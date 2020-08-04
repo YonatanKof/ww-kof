@@ -8,8 +8,4 @@
 	border-radius: var(--radius);
 	box-shadow: var(--shadow-sm);
 	transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
-	@media screen and (max-width: 480px) {
-		// Remove border-radius on small screens
-		border-radius: 0;
-    }
 }

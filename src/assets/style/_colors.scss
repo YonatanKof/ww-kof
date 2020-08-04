@@ -15,8 +15,8 @@ $color-fg-O20: transparentize($color-fg-light, 0.93);
 $color-fg-O10: transparentize($color-fg-light, 0.97);
 
 $color-primary-base: hsl(290, 100%, 38%); // should be darker then
-$color-primary-light: lighten($color-primary-base, 10%);
-$color-primary-dark: darken($color-primary-base, 15%);
+$color-primary-light: lighten($color-primary-base, 25%);
+$color-primary-dark: darken($color-primary-base, 10%);
 $color-primary-O50: transparentize($color-primary-base, 0.5);
 
 // Light default theme
@@ -32,7 +32,7 @@ body {
     --title-color: #{$color-fg-light};
     --body-color: #{$color-fg-base};
     --link-color: #{$color-primary-base};
-    --link-color-highlight: #{$color-primary-O50};
+    --link-color-highlight: #{$color-primary-light};
 }
 
 // Override variables for Dark theme

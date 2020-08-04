@@ -42,7 +42,7 @@ export default {
     },
     metaInfo() {
         return {
-            title: this.$page.post.title + ' by ' + this.$page.post.author_name,
+            title: this.$page.post.title + " by " + this.$page.post.author_name,
             meta: [
                 {
                     name: "description",
@@ -81,8 +81,12 @@ query Post ($id: ID!) {
     padding-bottom: var(--space-xl);
     text-align: center;
 }
-
 .post {
+    @media screen and (max-width: 480px) {
+        // Remove padding on small screens
+        margin: 0 calc(var(--content-space) * -1);
+        border-radius: 0;
+    }
     margin-bottom: var(--space-xl);
     &__header {
         /* width: calc(100% + var(--space) * 2); */

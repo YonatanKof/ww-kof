@@ -56,16 +56,14 @@ a {
 a {
   color: var(--link-color);
   font-size: var(--font-size--regular);
-  font-weight: var(--font-wight--bold);
-  text-decoration: var(--link-color-highlight) dashed underline;
-  transition: text-decoration 0.35s;
+  font-variation-settings: 'wght' var(--font-wight--bold);
+  text-decoration-style: underline;
+  text-decoration-skip-ink: auto;
+  transition: all 0.35s;
   &:hover {
-    text-decoration: var(--link-color-highlight) wavy underline;
+    letter-spacing: calc(var(--spacem-2xs) * -0.05);
+    font-variation-settings: 'wght' var(--font-wight--black);
   }
-  // &:visited {
-  //   text-decoration-color: var(--link-color-visited);
-  //   color: var(--link-color-visited);
-  // }
 }
 
 h1,
@@ -84,7 +82,7 @@ h6 {
 
 h1 {
   margin-top: 0;
-  font-size: var(--font-size-9xl);
+  font-size: var(--font-size-8xl);
   font-weight: var(--font-wight--black);
 }
 
@@ -116,7 +114,8 @@ em {
   font-weight: var(--font-wight--bolder);
 }
 strong {
-  font-weight: var(--font-wight--black);
+  font-weight: var(--font-wight--bolder);
+  text-transform: uppercase;
 }
 
 blockquote {

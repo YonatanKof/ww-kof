@@ -32,20 +32,16 @@ export default {
 
 <style lang="scss">
 .post-card {
-    margin-bottom: var(--space-2xl);
+    margin-bottom: var(--content-space);
     position: relative;
     &__header {
         /* margin: var(--space-2xl); */
-        margin-left: calc(var(--space-2xl) * -1);
-        margin-right: calc(var(--space-2xl) * -1);
-        margin-bottom: var(--space-md);
-        margin-top: calc(var(--space-2xl) * -1);
+        margin-left: calc(var(--content-space) * -1);
+        margin-right: calc(var(--content-space) * -1);
+        margin-bottom: var(--space-lg);
+        margin-top: calc(var(--content-space) * -1);
         overflow: hidden;
         border-radius: var(--radius) var(--radius) 0 0;
-        @media screen and (max-width: 480px) {
-            // Remove border-radius on small screens
-            border-radius: 0;
-        }
         &:empty {
             display: none;
         }

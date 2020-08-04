@@ -1,5 +1,5 @@
 <template>
-    <Layout :show-logo="false">
+    <Layout :show-logo="true">
         <!-- Author intro -->
         <Author 
             :show-title="true" v-bind:author-title="$static.metadata.siteName"

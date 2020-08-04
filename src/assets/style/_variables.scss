@@ -38,7 +38,7 @@ body {
 	--space: var(--space-2xl); // to dapracate!
 	--content-width: 860px;
 	--content-space: var(--space-2xl);
-	--header-height: var(--space-6xl);
+	--header-height: var(--space-7xl);
 	--radius: 5px;
 
 	// Screen size
@@ -70,10 +70,5 @@ html {
 @media screen and (max-width: 760px) {
 	html {
 		--base-font-size: 14px;
-	}
-}
-@media screen and (max-width: 480px) {
-	html {
-		--base-font-size: 12px;
 	}
 }

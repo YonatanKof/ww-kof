@@ -4,7 +4,7 @@ author_name: Yonatan Ben Knnan
 urlname: plugin-shortcuts-for-sketch
 date: 2020-07-12
 updated: 2019-02-06
-published: true
+published: false
 tags: ['Sketch','Productivity', 'Git']
 canonical_url: false
 description: How to create, edit or remove shortcuts for a Sketch plugin
