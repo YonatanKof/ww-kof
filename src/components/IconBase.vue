@@ -3,6 +3,8 @@
         xmlns="http://www.w3.org/2000/svg"
         :width="width"
         :height="height"
+        :stroke="stroke"
+        :stroke-width="strokeWidth"
         viewBox="0 0 32 32"
         :aria-labelledby="iconName"
         role="presentation"
@@ -32,6 +34,14 @@ export default {
         iconColor: {
             type: String,
             default: "currentColor"
+        },
+        stroke: {
+            type: String,
+            default: "none"
+        },
+        strokeWidth: {
+            type: [Number, String],
+            default: "none"
         }
     }
 };
