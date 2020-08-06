@@ -11,7 +11,9 @@
             height="28"
             width="28"
             icon-name="flip-theme-bright"
-            icon-color="var(--link-color)"
+            icon-color="none"
+            stroke="var(--link-color)"
+            stroke-width="3"
         >
             <IconBright />
         </IconBase>
@@ -21,7 +23,9 @@
             height="28"
             width="28"
             icon-name="flip-theme-dark"
-            icon-color="var(--link-color)"
+            icon-color="none"
+            stroke="var(--link-color)"
+            stroke-width="3"
         >
             <IconDark />
         </IconBase>
@@ -61,7 +65,13 @@ export default {
 .toggle-theme, .toggle-theme__icon {
     width: var(--space-xl);
     height: var(--space-xl);
+    transition: stroke-width, transform 0.35s;
+    &:hover {
+        stroke-width: 2;
+        transform: scale(1.15);
+    }
 }
+
 .toggle-theme {
     background-color: transparent;
     border: 0;
