@@ -8,24 +8,20 @@
         <IconBase
             class="toggle-theme__icon"
             v-if="darkTheme"
-            height="28"
-            width="28"
-            icon-name="flip-theme-bright"
+            icon-name="flip-theme-to-bright"
             icon-color="none"
             stroke="var(--link-color)"
-            stroke-width="3"
+            stroke-width="2"
         >
             <IconBright />
         </IconBase>
         <IconBase
             class="toggle-theme__icon"
             v-else
-            height="28"
-            width="28"
-            icon-name="flip-theme-dark"
+            icon-name="flip-theme-to-dark"
             icon-color="none"
             stroke="var(--link-color)"
-            stroke-width="3"
+            stroke-width="2"
         >
             <IconDark />
         </IconBase>
@@ -67,8 +63,8 @@ export default {
     height: var(--space-xl);
     transition: stroke-width, transform 0.35s;
     &:hover {
-        stroke-width: 2;
-        transform: scale(1.15);
+        stroke-width: 3;
+        transform: scale(1.08);
     }
 }
 
@@ -77,9 +73,6 @@ export default {
     border: 0;
     color: var(--body-color);
     cursor: pointer;
-    &:hover {
-        opacity: 0.8;
-    }
     &:focus {
         outline: none;
     }
