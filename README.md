@@ -1,6 +1,6 @@
 ## WWK
 
-Just another website using **Gridsome**
+Just another website using **Gridsome** 🙈
 
 > `siteName:` World Wide Kof
 
