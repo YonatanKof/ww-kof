@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="150" viewBox="0 0 300 150">
+  <style>
+    @keyframes animmm {
+      0% {
+        transform: skewX(36deg)
+      }
+      to {
+        transform: skewX(-36deg)
+      }
+    }
+    .kofff {
+      animation: animmm 4s steps(24, jump-none) infinite alternate;
+    }
+  </style>
+  <g fill="none" fill-rule="evenodd">
+    <rect class="kofff" width="20" height="150" x="32" y="0" transform-origin="42 75" style="animation-delay: -0s" fill="#b32626" fill-opacity="0.75" />
+    <rect class="kofff" width="20" height="150" x="86" y="0" transform-origin="96 75" style="animation-delay: -1s" fill="#e4da49" fill-opacity="0.75" />
+    <rect class="kofff" width="20" height="150" x="140" y="0" transform-origin="150 75" style="animation-delay: -2s" fill="#34fa02" fill-opacity="0.75" />
+    <rect class="kofff" width="20" height="150" x="194" y="0" transform-origin="204 75" style="animation-delay: -3s" fill="#5fddd3" fill-opacity="0.75" />
+    <rect class="kofff" width="20" height="150" x="248" y="0" transform-origin="258 75" style="animation-delay: -4s" fill="#4657ec" fill-opacity="0.75" />
+  </g>
+</svg>

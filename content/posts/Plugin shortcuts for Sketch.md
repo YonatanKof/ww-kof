@@ -6,6 +6,8 @@ date: 2020-07-12
 updated: 2019-02-06
 published: true
 tags: ['Sketch','Productivity', 'Git']
+cover_image: ./images/rotateme.svg
+cover_caption: Polls on the beach
 canonical_url: false
 description: How to create, edit or remove shortcuts for a Sketch plugin
 ---
@@ -23,6 +25,8 @@ Luckily we can remedy the situation (somehow) easily by creating our own custom 
 ### Find the plugin
 
 Firstly let's locate the plugin at hand. The easiest way is by opening the Sketch ***Preferences*** (`⌘`+`,`) and under the ***Plugins*** tab and click the ***Reveal Plugin Folder*** in the contextual menu. Another way is to navigate using the finder, usually to be found in this path ► Library  ► Application Support  ► com.bohemiancoding.sketch3 ► Plugins
+
+![This image](./images/plugin-shortcuts-for-sketch/01-Select_and_reveal_the_plugin_in_Finder.png)
 
 ### Edit the plugin
 

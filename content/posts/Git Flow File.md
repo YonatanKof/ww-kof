@@ -7,7 +7,7 @@ updated: 2020-04-27
 published: true
 tags: ['Dev', 'git-flow', 'Git']
 series: false
-cover_image: ./images/bg-image-6.jpg
+cover_image: ./images/skewme.svg
 cover_caption: Polls on the beach
 dirction: ltr
 canonical_url: false

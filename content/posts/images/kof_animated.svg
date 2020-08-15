@@ -1,0 +1,48 @@
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" viewBox="0 0 400 400"
+	xml:space="preserve">
+	<g>
+		<path
+			style="fill:none;stroke:#333333;stroke-width:22;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+			d="
+		M370.5,172.97l-267.67,150.7c-83.24,46.89,19.67,94.24,19.67,21.28V137.69l108.23-60.8c71.9-45.21-28.23-94.24-28.23-14.43v136.52
+		c0,58.13-85.46-3.35-32.05-31.55L240.5,128v73c0,0,43.01-25.74,62.42-37.42c13.58-8.6,37.67-25.35,24.91-53.26
+		c-7.1-15.55-27.73-20.05-57.03,0.5" class="FYSHMgAp_0"></path>
+		<path id="XMLID_1_"
+			style="fill:none;stroke:#333333;stroke-width:22;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;"
+			d="
+		M354.17,228.62l-100.13,56.31C193.6,316.51,274,371.3,274,305.37V140" class="FYSHMgAp_1"></path>
+	</g>
+	<style>
+		.FYSHMgAp_0 {
+			stroke-dasharray: 1527 1529;
+			stroke-dashoffset: 1528;
+			animation: FYSHMgAp_draw 1500ms ease-out 0ms reverse;
+		}
+
+		.FYSHMgAp_1 {
+			stroke-dasharray: 396 398;
+			stroke-dashoffset: 397;
+			animation: FYSHMgAp_draw 1500ms ease-out 0ms reverse;
+		}
+
+		@keyframes FYSHMgAp_draw {
+			100% {
+				stroke-dashoffset: 0;
+			}
+		}
+
+		@keyframes FYSHMgAp_fade {
+			0% {
+				stroke-opacity: 1;
+			}
+
+			92.98245614035088% {
+				stroke-opacity: 1;
+			}
+
+			100% {
+				stroke-opacity: 0;
+			}
+		}
+	</style>
+</svg>
