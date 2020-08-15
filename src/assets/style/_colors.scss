@@ -23,6 +23,7 @@ $color-primary-O50: transparentize($color-primary-base, 0.5);
 body {
     // Colors -- BG
     --bg-color: #{$color-bg-base};
+    --bg-color-HL: #{$color-bg-dark};
     --bg-content-color: #{$color-bg-light};
     --bg-code: #{$color-bg-O75};
     --bg-pre: #{$color-fg-O10};
@@ -39,6 +40,7 @@ body {
 body[data-theme="dark"] {
     // Colors -- BG
     --bg-color: #{$color-fg-light};
+    --bg-color-HL: #{$color-fg-dark};
     --bg-content-color: #{$color-fg-base};
     --bg-code: #{$color-fg-O60};
     --bg-pre: #{$color-fg-dark};
