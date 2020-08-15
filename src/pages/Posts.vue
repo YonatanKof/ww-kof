@@ -1,12 +1,18 @@
 <template>
     <Layout :show-logo="true" :show-posts="true">
-        <Author 
-          :show-title="true" author-title="Posts" 
-          :show-bio-text="true" author-bio="Some writing by the kof himself" 
+        <Author
+            :show-title="true"
+            author-title="Posts"
+            :show-bio-text="true"
+            author-bio="Some writing by the kof himself"
         />
         <!-- List posts -->
         <div class="posts">
-            <PostCard v-for="edge in $page.posts.edges" :key="edge.node.id" :post="edge.node" />
+            <PostCard 
+                v-for="edge in $page.posts.edges" 
+                :key="edge.node.id" 
+                :post="edge.node" 
+            />
         </div>
         <!-- Author intro -->
     </Layout>
