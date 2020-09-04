@@ -4,6 +4,7 @@ $color-bg-dark: darken($color-bg-base, 10%);
 $color-bg-O75: transparentize($color-bg-base, 0.1);
 $color-bg-O50: transparentize($color-bg-base, 0.5);
 $color-bg-O25: transparentize($color-bg-base, 0.75);
+$color-bg-O10: transparentize($color-bg-base, 0.9);
 
 $color-fg-base: hsl(60, 30%, 7%); // should be darker then
 $color-fg-light: lighten($color-fg-base, 4%);
@@ -42,7 +43,7 @@ body[data-theme="dark"] {
     --bg-color: #{$color-fg-light};
     --bg-color-HL: #{$color-fg-dark};
     --bg-content-color: #{$color-fg-base};
-    --bg-code: #{$color-fg-O60};
+    --bg-code: #{$color-bg-O10};
     --bg-pre: #{$color-fg-dark};
     --border-color: #{$color-bg-O25};
     
