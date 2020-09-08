@@ -11,7 +11,6 @@ cover_caption: Polls on the beach
 canonical_url: false
 description: How to create, edit or remove shortcuts for a Sketch plugin
 ---
-<a href="#link-me">Link me</a>
 
 There's a thing you're doing all day long - moving your hands and cursor to control your apps - When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
 
@@ -24,7 +23,7 @@ That same year it looked like *Sketch* was stable enough for production. One of 
 
 **In this article we'll review 2 ways to rectify the situation.**
 - One is by using the macOS's keyboard panel
-- The other in by using the plugins `manifest.js`
+- The other in by using the plugin's `manifest.json`
 
 We'll figure out the Jobs to be done, state the problem, go trough my solutions, cover some edge cases and install a tool that might help a little.  
 
@@ -36,7 +35,7 @@ Hope you guys enjoy it 🙆‍♂️ Let's go!
 
 ## 1st job - macOS shortcuts
 
-1. Scrolling the *Layers* and *Components* panel on a big file is nice but sometimes I'd like the get an overview at a glance. That's why the `Collapse All Groups` command is for. Unfortunately it has no shortcut 😢
+1. Scrolling the *Layers* and *Components* panel on a big file is nice but sometimes I'd like the get an overview at a glance. That's why the `Collapse All Groups` command is good for. Unfortunately it has no shortcut 😢
 2. I do a lot aligning when I design, moving my courser to the top right *(fig.align)* all the time is annoying. I'd like to have a shortcut for the Center / Horizontal / Top / Bottom / Left / Right alignment.
 
 
@@ -49,11 +48,12 @@ Hope you guys enjoy it 🙆‍♂️ Let's go!
 
 ## 2nd job - Plugin shortcut
 
-Recently I've installed the [Color Contrast Analyser for Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser), which a useful plugin if you'd like to make accessible products without leaving Sketch app for an online solution. The plugin ships without a shortcut and when working on a new design with a lot of contrast checking it can get real annoying real fast. Ad a keyboard fanatics I'd like to set a shortcut for it.
+Recently I've installed the [Color Contrast Analyser for Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser), which a useful plugin if you'd like to make accessible products without leaving Sketch app for a solution online. The plugin ships without a shortcut and when working on a new design with a lot of contrast checking it can get real annoying real fast. As a keyboard fanatics I'd like to set a shortcut for it.
 
 ### The problem
 
 macOS shortcuts works only for installed apps. Plugins are installed in the app, so the Keyboard Shortcut Manager won't work on them.  
+
 How do I create a short cut anyways?
 
 ## 3rd job - Editing plugin shortcut
@@ -72,32 +72,32 @@ How do I create a short cut anyways?
 # The solutions
 
 ## 1st job solution - macOS shortcuts
-### 1.1 - Create custom macOS shortcut 
+### Create custom macOS shortcut 
 
-1. Open the **Keyboard** Preferences on the **Shortcut** tab and on the **App Shortcut** on left panel **.
-
-   You can use the *Spotlight Search* with the `control + spacebar` shortcut and start typing `ke...` *(fig.spot)* or just look for it in the System Preferences found in the Apple menu.
-2. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window (*fig.prompt*).
+1. Open the *Keyboard* Preferences on the *Shortcut* tab and click the *App Shortcut* on left panel *<a href="#fig-keyOS">(fig.keyOS)</a>*.
+   
+   You can use the *Spotlight Search* with the `control + spacebar` shortcut and start typing `ke...` *<a href="#fig-spot">(fig.spot)</a>*  or just look for it in the System Preferences found in the Apple menu.
+2. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window *<a href="#fig-prompt">(fig.prompt)</a>*.
 3. Pick the app at hand, in our case *Sketch*.
 4. Type the the  `Collapse All Groups` command.
    
    Be mindful - you'll have to type the command name exactly as it appears in the app's menu, including capital letters and spacing.
   
-5. Type the shortcut you want into the *Keyboard Shortcut* input. You'll have to use a modifier key (one of this guys `ctrl` `option` `cmd` `shift`) and regular key (every other key that isn't those guys).
+5. Type the shortcut you want into the *Keyboard Shortcut* input. You'll have to use a combination of a <a href="#mod-keys">modifier and a regular keys</a> .
    
-   For this shortcut I'll use the `ctrl` `option` `command` + `c` combo - by typing them while in the input *(fig.filled prompt)*.
+   For this shortcut I'll use the `ctrl` `option` `cmd` + `c` combo - by typing them while in the input *<a href="#fig-filled-prompt">(fig.filled prompt)</a>*.
 
 6. Click `Add` and there you have it! Your first shortcut for Sketch using macOS's native panel
 
 > BTW - This technique can be used by **all** apps or a **specific** app, and not just *Sketch* 😎. You can see in the screenshot I've added the super useful `Merge All Windows` command for all application. Also super useful is the `Show Help menu`, which is a system shortcut that I'll review later.
 
-<a name="fig-keyOS"></a>![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager.png) *fig.keyOS*
+<span id="fig-keyOS">![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager.png) *fig.keyOS*</span>
 
-![fig.spot - macOS Spotlight Search](./pss-assets/Extra-Spotlight_Search.png) *fig.spot*
+<span id="fig-spot">![fig.spot - macOS Spotlight Search](./pss-assets/Extra-Spotlight_Search.png) *fig.spot*</span>
 
-![fig.prompt - A prompt widow to add command to an app](./pss-assets/MasOS-Add_Shortcut_Prompt.png) *fig.prompt*
+<span id="fig-prompt">![fig.prompt - A prompt widow to add command to an app](./pss-assets/MasOS-Add_Shortcut_Prompt.png) *fig.prompt*</span>
 
-![fig.filled prompt - A full add shortcut prompt](./pss-assets/MasOS-Filled_Prompt.png) *fig.filled prompt*
+<span id="fig-filled-prompt">![fig.filled prompt - A full add shortcut prompt](./pss-assets/MasOS-Filled_Prompt.png) *fig.filled prompt*</span>
 
 ### 1.2 - Create shortcuts for none unique commands 
 
@@ -114,7 +114,9 @@ I'll use the `ctrl` + `option` + `cmd` + `shift` + `↑` combo for align *Top*, 
 
 ## 2nd solution - Create plugin shortcut
 
-As mentioned, the macOS's shortcut manager won't work for an app plugin, so in order to create a custom shortcut for  plugins we'll use the plugin's `manifest.js` file. Every plugin is a `.sketchplugin` file but under the hood it's actually a folder on you computer, and in that folder the `manifest` resides.
+As mentioned, the macOS's shortcut manager won't work for an app plugin, in order to create a custom shortcut for  plugins we'll use the plugin's `manifest.json` file that can be found inside the plugin. 
+
+> Every plugin is a `.sketchplugin` file but under the hood it's actually a folder on you computer, and in that folder the `manifest` resides.
 
 So how do we do it?
 
@@ -156,11 +158,15 @@ So how do we do it?
 
 ---
 
-## <span id="link-me">Good to know</span>
+## Good to know
 
-### Modifier Keys
+### <span id="mod-keys">Modifier & Regular Keys</span>
 
-Are their name suggest, modifier keys change the normal behavior of a key - It turns `1` into a `!` - Hell yeah! These are the available modifiers - `ctrl` ⌃  `option` ⌥ `cmd` ⌘ `shift` ⇧ - We can use one modifier key or a combination of them. 
+Are their name suggest, modifier keys change the normal behavior of a key - It turns `1` into a `!` - Hell yeah! The available modifiers are; `ctrl`, `option`, `cmd` & `shift`. 
+
+Regular key are the reset of the keys; A to Z, 1 to 0 and all the special characters ([;'\/.,`§]).
+
+When it comes to shortcuts we can use one modifier key or a combination of them plus a Regular key.
 
 ### Duplicated shortcuts
 
