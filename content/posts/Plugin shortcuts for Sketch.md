@@ -11,6 +11,7 @@ cover_caption: Polls on the beach
 canonical_url: false
 description: How to create, edit or remove shortcuts for a Sketch plugin
 ---
+<a href="#link-me">Link me</a>
 
 There's a thing you're doing all day long - moving your hands and cursor to control your apps - When you add up all these small movements you'll quickly end up whit a big wasteful repetition. You might have missed it because it's small. You might haven't deal with it because you don't know how - Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
 
@@ -33,134 +34,129 @@ Hope you guys enjoy it 🙆‍♂️ Let's go!
 ---
 # Jobs to be done
 
-## 1st job
+## 1st job - macOS shortcuts
 
-I do a lot aligning when I design, moving my courser to the top right *(fig.align)* all the time is annoying. I'd like to have a shortcut for the Center / Horizontal / Top / Bottom / Left / Right alignment.
+1. Scrolling the *Layers* and *Components* panel on a big file is nice but sometimes I'd like the get an overview at a glance. That's why the `Collapse All Groups` command is for. Unfortunately it has no shortcut 😢
+2. I do a lot aligning when I design, moving my courser to the top right *(fig.align)* all the time is annoying. I'd like to have a shortcut for the Center / Horizontal / Top / Bottom / Left / Right alignment.
+
+
+### 1st job problem
+
+1. How do I set up a shortcut on macOS? And how do I make it specific for *Sketch*?
+2. Commands need to be unique. Let's take for example the `Left` command. You can find it under `Text -> Align` or under `Arrange -> Align`. So the second problem is, how do I set up a none unique shortcut?
 
 ![Fig.align - Sketch Alignment Tools](./pss-assets/Extra-Sketch_Alignment_Tools.png) *fig.align*
 
-### The problem
-
-- How do I set a shortcuts for Sketch on macOS? 
-- How do I do it for nested commands?
-
-> You ask what are **Nested command?** As we can see an example in *fig.ZZZ* below, where the Alignment options are nested in the *Align* sub-menu.
->
-> ![fig.ZZZ - screen shot of Manager](./pss-assets/Extra-Nested_Commands.png) *fig.ZZZ*
-
-## 2nd job
+## 2nd job - Plugin shortcut
 
 Recently I've installed the [Color Contrast Analyser for Sketch](https://github.com/getflourish/Sketch-Color-Contrast-Analyser), which a useful plugin if you'd like to make accessible products without leaving Sketch app for an online solution. The plugin ships without a shortcut and when working on a new design with a lot of contrast checking it can get real annoying real fast. Ad a keyboard fanatics I'd like to set a shortcut for it.
 
 ### The problem
 
-How do I set a shortcuts for Sketch *Plugins* when most of them are nested command? 
-> Sad fact - macOS Keyboard Shortcut Manager will work **just** for an app's nested command and **not** for its plugins, which are the majority 🤦
+macOS shortcuts works only for installed apps. Plugins are installed in the app, so the Keyboard Shortcut Manager won't work on them.  
+How do I create a short cut anyways?
 
-## 3rd job 
+## 3rd job - Editing plugin shortcut
 
-Some shortcuts are troublesome, let's say the [Comma plugin](https://github.com/margusholland/Comma) - I don't use it that often but it holds a lot of valuable shortcuts out of the box. I'd like to remove them because I might want to use them somewhere else and I also click them by mistake **all** the fricking time 😤
+1. Some shortcuts are troublesome, let's say the [Comma plugin](https://github.com/margusholland/Comma). On the one hand I don't use it that often but on the other hand it holds a lot of valuable shortcuts (as you can see on *fig.comma*). I'd like to remove all these shortcuts because I might want to use them somewhere else and I also keep clicking them by mistake **all** the fricking time 😤
+2. There are two Comma shortcuts I'd like to keep while using a different key combo.
 
-There is one Comma shortcut I'd like to keep while using a different shortcut
-
+![fig.comma - Comma plugin banner taken form their Github Page](./pss-assets/Comma_plugin.png)
 ### The problem
 
-- How do I delete unwanted plugin shortcuts? 
-- How do I edit existing plugin shortcuts? 
+1. How do I delete unwanted plugin shortcuts? 
+2. How do I edit existing plugin shortcuts? 
 
 ---
 
 # The solutions
 
-## 1st solution
-### Create your own custom macOS shortcut 
+## 1st job solution - macOS shortcuts
+### 1.1 - Create custom macOS shortcut 
 
-Before we get started please see *(fig.keyOS)* below - it's a screenshot of macOS Keyboard Shortcut Manager. Now let's see how we get it going. BTW - This technique can be used by **all** apps or a **specific** app, not just Sketch 😎
-
-![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager.png) *fig.keyOS*
-
-1. Open the Keyboard Preferences.
+1. Open the **Keyboard** Preferences on the **Shortcut** tab and on the **App Shortcut** on left panel **.
 
    You can use the *Spotlight Search* with the `control + spacebar` shortcut and start typing `ke...` *(fig.spot)* or just look for it in the System Preferences found in the Apple menu.
-   ![Fig.spot - macOS Spotlight Search](./pss-assets/Extra-Spotlight_Search.png)
-
-2. Click the **Shortcut** Tab, like in *(fig.keyOS)*
-3. On the left panel, click **App Shortcut**
-4. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window (*fig.prompt*)
-   ![Fig.spot - macOS Spotlight Search](./pss-assets/MasOS-Add_Shortcut_Prompt.png) *fig.prompt*
-5. Pick the app at hand, in our case *Sketch*
-6. Type the name of the command you'd like to make a shortcut of. Be mindful - you'll have to type the command name letter to letter as shown in the app's menu, including capital letters and spacing.
-  
-   Let's start with something simple and useful like `Collapse All Groups` by pasting this string into the *Menu Title* input.
-7. Let's type the shortcut into the *Keyboard Shortcut* input. It's usually a modifier key - one of this guys `ctrl` `option` `cmd` `shift` and regular key (every other key that isn't those guys)
+2. At the bottom of the right panel you'll see `+` and `-` buttons. Clicking the `+` button will open a prompt window (*fig.prompt*).
+3. Pick the app at hand, in our case *Sketch*.
+4. Type the the  `Collapse All Groups` command.
    
-   For this shortcut i'll use `ctrl` `option` `cmd` + `c` combo - the way to add it is just by clicking them as you would a shortcut while you're in the input.
+   Be mindful - you'll have to type the command name exactly as it appears in the app's menu, including capital letters and spacing.
+  
+5. Type the shortcut you want into the *Keyboard Shortcut* input. You'll have to use a modifier key (one of this guys `ctrl` `option` `cmd` `shift`) and regular key (every other key that isn't those guys).
+   
+   For this shortcut I'll use the `ctrl` `option` `command` + `c` combo - by typing them while in the input *(fig.filled prompt)*.
 
-   It should look like this *(fig.filled prompt)*
+6. Click `Add` and there you have it! Your first shortcut for Sketch using macOS's native panel
 
-   ![Fig.spot - A full add shortcut prompt](./pss-assets/MasOS-Filled_Prompt.png) *fig.filled prompt*
+> BTW - This technique can be used by **all** apps or a **specific** app, and not just *Sketch* 😎. You can see in the screenshot I've added the super useful `Merge All Windows` command for all application. Also super useful is the `Show Help menu`, which is a system shortcut that I'll review later.
 
-8. Click `Add` and there you have it! Your first shortcut for Sketch using macOS's native panel
+<a name="fig-keyOS"></a>![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager.png) *fig.keyOS*
 
-### Create macOS shortcuts for nested commands
+![fig.spot - macOS Spotlight Search](./pss-assets/Extra-Spotlight_Search.png) *fig.spot*
 
-In the Jobs to be jod I've said I want the Alignment commands which are nested. In order to do so we'll repeat the above flow with the next exception: in the *Menu Title* input we'll write the commands full location with this pattern `->` (`dash` + `greater than`) to mark nest descent.
-So if we'll add the Top Align command it will look like this: 
+![fig.prompt - A prompt widow to add command to an app](./pss-assets/MasOS-Add_Shortcut_Prompt.png) *fig.prompt*
+
+![fig.filled prompt - A full add shortcut prompt](./pss-assets/MasOS-Filled_Prompt.png) *fig.filled prompt*
+
+### 1.2 - Create shortcuts for none unique commands 
+
+In order to do so we'll need to write the command's full location using this pattern `->` (`dash` + `greater than`) to mark nest descent.
+So the left align arrange command needs to look like this: 
 ```
 Arrange->Align->Top 
 ```
 I'll use the `ctrl` + `option` + `cmd` + `shift` + `↑` combo for align *Top*, the `↓` for *Bottom*, the `→` *Right* and, you guessed it, `←` for *Left*. For the *Horizontally* i'll use `h` and `v` for *Vertically*
 
----
-
-## 2nd solution
-
-Create a custom shortcut using the plugins `manifest.js` file.
-
-### Find the plugin
-
-Firstly let's locate the plugin at hand. The easiest way is by opening the Sketch ***Preferences*** (`⌘`+`,`) and under the ***Plugins*** tab and click the ***Reveal Plugin Folder*** in the contextual menu. Another way is to navigate using the finder, usually to be found in this path ► Library  ► Application Support  ► com.bohemiancoding.sketch3 ► Plugins
-
-![The preferences panel showing the Plugin tab](./pss-assets/01-Select_and_reveal_the_plugin_in_Finder.png)
-
-### Edit the plugin
-
-Just to make sure where on the right page - plugins are files with the `.sketchplugin` suffix and the file name will be similar or identical to the plugin name. Sweet. Now that you've located the plugin, use the contextual menu to **Show Package Content**. FYY - The plugin is a package, it means that and behind the scenes the plugin is a set of folders and files - some plugins holed many and some just a few. 
-
-Once we're in the package content we'll look for a file called `manifest.js`, usually to be found in ► Contents ► Sketch.  When you locate it open it using a text editor - I'm using VS code but you can use TextEdit or whatever text/code editor you like.
-
-### Edit the `manifest.js` file
-
-Plugins might hold just one command, like this contrast-checker plugin - Some might hold dozens of commands, like the all encompassing [Automate-Sketch](https://github.com/Ashung/Automate-Sketch) plugin. 
-
-Either way we're looking for this pattern → in this example there are 2 commands with no shortcuts. We're looking for  the `name` and `shortcut` key/value pair - The name will be identical to the command as it's presented in the [Plugins select menu](https://www.notion.so/yonatankof/Plugin-shortcuts-for-Sketch-81689b34a9814b4492afb1059e96b638#11a25485adbe49caad3bdf4a011e5891), and the shortcut, well, let's edit it 💪
-
-```json
-"commands": [
-    {
-      "name": "Command Name",
-			"identifier": "command_name",
-      "handler": "CommandName",
-      "script": "Command_Name.js",
-      "shortcut": ""
-    },
-		{
-      "name": "Another Command",
-      "identifier": "another_command",
-			"handler": "AnotherCommand",
-      "script": "Another_Command.js",
-      "shortcut": ""
-    },
-  ]
-```
-
-We can see that the example and the screenshot aren't identical, its OK, they don't have to be, every developer writes the plugin a bit differently.
-
-I've used the `ctrl` `option` `cmd` `shift` `c` combo to get plugin running, but you can use any modifier key combination you'd like. Save the file and now the shortcut should be available in Sketch
+![fig.keyOS - macOS Keyboard Shortcut Manager](./pss-assets/MasOS-Shortcut_Manager_Full.png) *fig.keyOS*
 
 ---
 
-## Good to know
+## 2nd solution - Create plugin shortcut
+
+As mentioned, the macOS's shortcut manager won't work for an app plugin, so in order to create a custom shortcut for  plugins we'll use the plugin's `manifest.js` file. Every plugin is a `.sketchplugin` file but under the hood it's actually a folder on you computer, and in that folder the `manifest` resides.
+
+So how do we do it?
+
+1. Find the plugin
+   
+   The easiest way to locate the plugins folder is by opening *Sketch*'s Preferences panel (`⌘`+`,`) and under the *Plugins* tab click the *Reveal Plugin Folder* in the contextual menu (*fig.preferences panel*). 
+   
+   Another way is to navigate using the finder, usually to be found in this path `Users ► {user name} ► Library  ► Application Support  ► com.bohemiancoding.sketch3 ► Plugins`   
+
+2. Locate and open the file 
+   
+   Plugins are files with the `.sketchplugin` suffix and the file we're looking for will a name that is similar or identical to the plugin name. 
+   
+   These files are actually enclosed folders and right clicking them will reveal the `Show Package Contents` command in the contextual menu. Click it! (*fig.plugin folder*).
+   
+3. Find the manifest file
+   
+   Being a package means that and behind the scenes the plugin is a set of folders and files - some plugins holed many and some just a few. 
+  
+   Anyways, once we're in the package content we'll look for a file called `manifest.js`, usually to be found in `... ► Contents ► Sketch`.  When you locate it open it using a text editor - I'm using VS code but you can use TextEdit or whatever text or code editor you like (*fig.manifest*).
+
+4. Edit the `manifest.js` file
+   
+   We're looking for the `shortcut` key/value pair - where the key is the title and value, that is now empty, will be the shortcut combo itself (*fig.empty shortcut*). 
+
+   Now let's type the combo - I'd like it to be `ctrl` + `option` + `cmd` + `shift` + `c` combo to get plugin running, but you can use any modifier key combination you'd like. Save the file and now the shortcut should be available in Sketch *(fig.with shortcut)*.
+
+5. Save the file and enjoy it in *Sketch*
+
+![fig.preferences panel - The preferences panel showing the Plugin tab](./pss-assets/Plugins-Select_and_reveal_the_plugin_in_Finder.png) *fig.preferences panel*
+
+![fig.plugin folder - The folder containing all of the plugins ](./pss-assets/Plugins-Folder.png) *fig.plugin folder*
+
+![fig.manifest - The location of the manifest file in the plugin package contents folder](./pss-assets/Plugins-Find_and_open_manifest.js_in_an_editor.png) *fig.manifest*
+
+![fig.empty shortcut - The color checker manifest file open in VS code with no shortcut](./pss-assets/Plugins-Find_the_relevant_command.png) *fig.empty shortcut*
+
+![fig.with shortcut - The color checker manifest file open in VS code with a shortcut](./pss-assets/Plugins-Add_shortcut_string_and_save_file.png) *fig.with shortcut*
+
+---
+
+## <span id="link-me">Good to know</span>
 
 ### Modifier Keys
 
@@ -241,9 +237,43 @@ Conversely, you can add a shortcut *key/value pair* if none exist, like in the c
 
 
 ---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
+---
 
 # Unused
+
+```javascript
+"shortcut": "ctrl option cmd shift c"
+// It should look like this 
+```
 
 Doing the same small-but-slow (`🐜`) thing over and over again leads up to a big-and-slower thing. You might have missed it because it's small. You might haven't deal with it because you don't know how - what ever the reason it's a wast of your time and **this post is for you!** 
 
 You might have missed it because it's small. You might haven't deal with it because you don't know how - But when adding small things you end up with a big one. I'm talking about what you do all day long - moving your hands and curser to control your apps. Whatever the reason you've let it slide, it's a wast of your time and **this post is for you!** 
+
+. How do I set a shortcuts for Sketch *Plugins* when most of them are nested command? 
+> Sad fact - macOS Keyboard Shortcut Manager will work **just** for an app's nested command and **not** for its plugins, which are the majority 🤦
+
+
+
+> What are **Nested command** you ask? As we can see an example in *fig.ZZZ* below, where the Alignment options are nested in the *Align* sub-menu.
+>
+> ![fig.ZZZ - screen shot of Manager](./pss-assets/Extra-Nested_Commands.png) *fig.ZZZ*
+
+- How do I do it for nested commands?
+
+Either way we're looking for this pattern → in this example there are 2 commands with no shortcuts. We're looking for the `name` and `shortcut` key/value pair - The name will be identical to the command as it's presented in the [Plugins select menu](https://www.notion.so/yonatankof/Plugin-shortcuts-for-Sketch-81689b34a9814b4492afb1059e96b638#11a25485adbe49caad3bdf4a011e5891), and the shortcut, well, let's edit it 💪
+
+The contrast-checker plugin have just one command but some might hold dozens of commands, like the all encompassing [Automate-Sketch](https://github.com/Ashung/Automate-Sketch) plugin. 
