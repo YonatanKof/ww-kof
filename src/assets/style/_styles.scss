@@ -1,3 +1,7 @@
+@mixin animtion-ctrl($type, $dur, $easing) {
+    transition: $type $dur;
+    transition-timing-function: $easing;
+}
 // Default
 body {
     background-color: var(--bg-color);

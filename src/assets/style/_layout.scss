@@ -5,7 +5,7 @@ $display-size-md: 960px;
 $display-size-sm: 760px;
 $display-size-xs: 480px;
 
-// Width mixings
+// Width mixins
 @mixin mQ-max($width-number) {
     @media screen and (max-width: $width-number) {
         @content;
@@ -66,7 +66,8 @@ body {
 
     // Sizes
     --space: var(--space-2xl); // to dapracate!
-    --content-width: 860px;
+    --content-width-sm: 768px;
+    --content-width-md: 860px;
     --content-space: var(--space-2xl);
     --header-height: var(--space-7xl);
     --radius: 5px;
