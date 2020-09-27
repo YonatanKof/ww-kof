@@ -1,0 +1,73 @@
+// Screen size
+$display-size-xl: 1440px;
+$display-size-lg: 1280px;
+$display-size-md: 960px;
+$display-size-sm: 760px;
+$display-size-xs: 480px;
+
+// Width mixings
+@mixin mQ-max($width-number) {
+    @media screen and (max-width: $width-number) {
+        @content;
+    }
+}
+@mixin mQ-min($width-number) {
+    @media screen and (min-width: $width-number) {
+        @content;
+    }
+}
+
+html {
+    --base-font-size: 16px;
+}
+
+// Make  things smaller for mobile
+@media screen and (max-width: $display-size-sm) {
+    html {
+        --base-font-size: 14px;
+    }
+}
+
+body {
+    // Spacing
+    --space-base: var(--base-font-size);
+    --space-4xs: calc(0.0625 * var(--space-base)); // 1px;
+    --space-3xs: calc(0.125 * var(--space-base)); // 2px;
+    --space-2xs: calc(0.25 * var(--space-base)); // 4px;
+    --space-xs: calc(0.5 * var(--space-base)); // 8px;
+    --space-sm: calc(0.75 * var(--space-base)); // 12px;
+    --space-md: var(--space-base); // 16px;
+    --space-lg: calc(1.25 * var(--space-base)); // 20px;
+    --space-xl: calc(1.5 * var(--space-base)); // 24px;
+    --space-2xl: calc(2 * var(--space-base)); // 32px;
+    --space-3xl: calc(2.5 * var(--space-base)); // 40px;
+    --space-4xl: calc(3 * var(--space-base)); // 48px;
+    --space-5xl: calc(3.5 * var(--space-base)); // 56px;
+    --space-6xl: calc(4 * var(--space-base)); // 64px;
+    --space-7xl: calc(5 * var(--space-base)); // 80px;
+    --space-8xl: calc(6 * var(--space-base)); // 96px
+    // Spacing EM
+    --spacem-base: 1em;
+    --spacem-4xs: calc(0.0625 * var(--spacem-base));
+    --spacem-3xs: calc(0.125 * var(--spacem-base));
+    --spacem-2xs: calc(0.25 * var(--spacem-base));
+    --spacem-xs: calc(0.5 * var(--spacem-base));
+    --spacem-sm: calc(0.75 * var(--spacem-base));
+    --spacem-md: var(--spacem-base);
+    --spacem-lg: calc(1.25 * var(--spacem-base));
+    --spacem-xl: calc(1.5 * var(--spacem-base));
+    --spacem-2xl: calc(2 * var(--spacem-base));
+    --spacem-3xl: calc(2.5 * var(--spacem-base));
+    --spacem-4xl: calc(3 * var(--spacem-base));
+    --spacem-5xl: calc(3.5 * var(--spacem-base)); // 56px;
+    --spacem-6xl: calc(4 * var(--spacem-base)); // 64px;
+    --spacem-7xl: calc(5 * var(--spacem-base)); // 80px;
+    --spacem-8xl: calc(6 * var(--spacem-base)); // 96px
+
+    // Sizes
+    --space: var(--space-2xl); // to dapracate!
+    --content-width: 860px;
+    --content-space: var(--space-2xl);
+    --header-height: var(--space-7xl);
+    --radius: 5px;
+}
