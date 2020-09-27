@@ -77,12 +77,15 @@ query Post ($id: ID!) {
 </page-query>
 
 <style lang="scss">
+@import "../assets/style/index";
+
 .post-title {
     padding-bottom: var(--space-xl);
     text-align: center;
 }
 .post {
-    @media screen and (max-width: 480px) {
+    
+    @include mQ-max($display-size-xs) {
         // Remove padding on small screens
         margin: 0 calc(var(--content-space) * -1);
         border-radius: 0;
@@ -96,7 +99,7 @@ query Post ($id: ID!) {
         margin-top: calc(var(--space-2xl) * -1);
         overflow: hidden;
         border-radius: var(--radius) var(--radius) 0 0;
-        @media screen and (max-width: 480px) {
+        @include mQ-max($display-size-xs) {
             // Remove border-radius on small screens
             border-radius: 0;
         }
