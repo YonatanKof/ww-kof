@@ -46,6 +46,7 @@ export default {
 @import "../assets/style/index";
 
 .about {
+  margin-top: var(--spacem-6xl);
   max-width: var(--content-width-sm);
   display: flex;
   flex-direction: column;
@@ -55,7 +56,7 @@ export default {
   }
 
   @include mQ-max($display-size-xs) {
-    background-color: aliceblue;
+    // background-color: aliceblue;
   }
   &__bio-text {
     max-width: 80%;
@@ -66,14 +67,17 @@ export default {
     flex-direction: row-reverse;
     position: relative;
     top: calc(var(--spacem-6xl) * -1);
-      z-index: 10;
+    z-index: 5;
   }
   &__image {
     filter: saturate(0.25) opacity(0.5);
     max-width: 40%;
     border-radius: 50%;
-    @include animtion-ctrl(filter, 0.35s, ease-in);
+    transform: scale(1.1);
+    @include animtion-ctrl(all, 0.35s, ease-out);
+    transform-origin: 50% 100%;
     &:hover {
+      transform: scale(1);
       filter: saturate(0.5) opacity(1);
     }
   }
