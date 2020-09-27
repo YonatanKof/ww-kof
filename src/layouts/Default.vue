@@ -5,6 +5,7 @@
                 <Logo v-if="showLogo" />
             </div>
             <div class="header__right">
+                <g-link class="nav__link" to="/about/">About</g-link>
                 <g-link v-if="showPosts" class="nav__link" to="/posts/">Content</g-link>
             </div>
         </header>
@@ -52,10 +53,6 @@ query {
 
 <style lang="scss">
 .wrapper {
-    /* background-image:  url("../../content/posts/images/rotateme.svg"), linear-gradient(var(--bg-color), var(--bg-color-HL));
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center; */
     min-height: 100vh;
     display: grid;
     grid-template-rows: auto 1fr auto;
@@ -86,7 +83,7 @@ query {
     @media screen and (min-width: 1300px) {
         //Make header sticky for large screens
         position: sticky;
-        width: 100%;
+        max-width: 100%;
     }
 }
 
