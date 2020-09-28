@@ -8,8 +8,8 @@
 }
 :root {
     //
-    --font-family--body: "Inter", "Inter var", -apple-system, system-ui, BlinkMacSystemFont,
-        "Segoe UI", Roboto, Arial, sans-serif;
+    --font-family--body: "Inter", "Inter var", -apple-system, system-ui,
+        BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
     --font-family--title: "Inknut Antiqua", Georgia, serif;
     --font-family--code: "Source Code Pro", Consolas, Monaco, "Andale Mono",
         "Ubuntu Mono", monospace;
@@ -116,7 +116,9 @@ h6 {
 small {
     font-size: 80%;
 }
-
+i {
+    font-style: italic;
+}
 em {
     font-weight: var(--font-wight--bolder);
 }
