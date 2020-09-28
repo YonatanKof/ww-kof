@@ -10,8 +10,8 @@ module.exports = {
 
   templates: {
     // Post: '/:title',        // This is to original 
-    // Post: 'posts/:urlname', // If in need for a "posts" namespace
-    Post: '/:urlname',         // I'm using this one for better controll over the URL
+    // Post: '/posts/:urlname', // If in need for a "posts" namespace
+    Post: '/:urlname',         // I'm using the :urlname for better control over the URL
     Tag: '/tag/:id'
   },
 
