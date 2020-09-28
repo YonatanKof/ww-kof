@@ -1,11 +1,11 @@
 <template>
   <Layout :show-logo="true" :show-posts="true">
     <section class="about">
-      <h1 class="about__title-1">Yonatan Ben Knaan</h1>
-      <h2 class="about__title-2">Designing digital products</h2>
+      <h1 class="about__title-1">Yonatan <span class="grab-word">Ben Knaan</span></h1>
+      <h2 class="about__title-2">Designing Digital Products</h2>
       <div class="about__bio-text">
         <p>
-          A <i>product designer</i>, a tech lover, a <i>maker</i>, a
+          A <i>product designer</i>, a tech lover, a maker, a
           <i>creative director</i> and an alright dude.
         </p>
         <p>
@@ -44,48 +44,53 @@ export default {
 
 <style lang="scss">
 @import "../assets/style/index";
-
+.grab-word{
+  white-space: nowrap;
+}
 .about {
+  &__title-1 {
+    font-size: var(--font-size-9xl);
+  }
+  &__title-2 {
+    font-size: var(--font-size-7xl);
+  }
   margin-top: var(--spacem-6xl);
   max-width: var(--content-width-sm);
   display: flex;
   flex-direction: column;
 
-  @include mQ-max($display-size-md) {
-    // background-color: wheat;
-  }
+  // @include mQ-max($display-size-md) {
+  //   background-color: wheat;
+  // }
 
-  @include mQ-max($display-size-xs) {
-    // background-color: aliceblue;
-  }
+  // @include mQ-max($display-size-sm) {
+  //   background-color: salmon;
+  // }
+
+  // @include mQ-max($display-size-xs) {
+  //   background-color: aliceblue;
+  // }
   &__bio-text {
     max-width: 80%;
     font-size: var(--font-size-3xl);
+    @include mQ-max($display-size-sm) {
+      max-width: 100%;
+      font-size: var(--font-size-4xl);
+    }
+    @include mQ-max($display-size-xs) {
+      font-size: var(--font-size-3xl);
+    }
   }
   &__image-cont {
     display: flex;
     flex-direction: row-reverse;
-    position: relative;
-    top: calc(var(--spacem-6xl) * -1);
-    z-index: 5;
   }
   &__image {
-    filter: saturate(0.25) opacity(0.5);
-    max-width: 40%;
+    filter: saturate(0.5) opacity(0.5) hue-rotate(30deg);
+    max-width: 50%;
     border-radius: 50%;
-    transform: scale(1.1);
-    @include animtion-ctrl(all, 0.35s, ease-out);
-    transform-origin: 50% 100%;
-    &:hover {
-      transform: scale(1);
-      filter: saturate(0.5) opacity(1);
-    }
-  }
-  @include mQ-max($display-size-sm) {
-    background-color: salmon;
-    &__image {
-      grid-row: 5 / span 6;
-    }
+    transform: scale(1.35);
+    transform-origin: 80% 100%;
   }
 }
 </style>
