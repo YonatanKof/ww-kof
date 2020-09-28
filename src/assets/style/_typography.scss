@@ -48,11 +48,15 @@ html {
 }
 
 body {
+    color: var(--body-color);
     font-family: var(--font-family--body);
     font-weight: var(--font-wight--regular);
     font-size: var(--font-size--regular);
     line-height: 1.25;
     font-feature-settings: "frac", "salt";
+}
+p {
+    color: var(--body-color);
 }
 
 p,
@@ -67,7 +71,7 @@ a {
     text-decoration: none;
     text-decoration-skip-ink: auto;
     transition: all 0.35s ease-in;
-    border-bottom: 1px solid rgba(0,0,0,0);
+    border-bottom: 1px solid rgba(0, 0, 0, 0);
     &:hover {
         letter-spacing: calc(var(--spacem-2xs) * -0.05);
         font-variation-settings: "wght" var(--font-wight--bolder);
@@ -139,15 +143,20 @@ ul {
     list-style-type: disc;
     margin-left: 1.25em;
     margin-bottom: 1.25em;
-    li {
-        margin-bottom: 0.6em;
-    }
 }
 ol {
     list-style-type: decimal;
     margin-left: 1.25em;
     margin-bottom: 1.25em;
-    li {
-        margin-bottom: 0.6em;
-    }
+}
+li {
+    margin-bottom: 0.6em;
+}
+
+// Text state
+@mixin dimmed {
+    opacity: 0.7;
+}
+@mixin disabled {
+    opacity: 0.35;
 }
