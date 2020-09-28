@@ -32,9 +32,9 @@ body {
     
     // Colors -- Typography
     --title-color: #{$color-fg-light};
-    --body-color: #{$color-fg-base};
+    --system-color: #{$color-fg-base};
     --link-color: #{$color-primary-base};
-    --link-color-highlight: #{$color-primary-light};
+    --link-color-HL: #{$color-primary-light};
 }
 
 // Override variables for Dark theme
@@ -49,11 +49,11 @@ body[data-theme="dark"] {
     
     // Colors -- Typography
     --title-color: #{$color-bg-base};
-    --body-color: #{$color-bg-light};
+    --system-color: #{$color-bg-light};
     --link-color: #{$color-primary-light};
-    --link-color-highlight: #{$color-primary-base};
+    --link-color-HL: #{$color-primary-base};
 
     // --title-color: #f2eeda;
-    // --body-color: #f2f0e6;
+    // --system-color: #f2f0e6;
     // --link-color: #de79f2;
 }

@@ -31,7 +31,7 @@ inspiration for Markdown's syntax is the format of plain text email.
 
 body {
 	background-color: var(--bg-color);
-	color: var(--body-color);
+	color: var(--system-color);
 	transition: color 0.6s, background-color 0.6s;
 	font-family: -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
 	margin: 0;

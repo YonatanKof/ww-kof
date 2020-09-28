@@ -48,7 +48,7 @@ html {
 }
 
 body {
-    color: var(--body-color);
+    color: var(--system-color);
     font-family: var(--font-family--body);
     font-weight: var(--font-wight--regular);
     font-size: var(--font-size--regular);
@@ -56,7 +56,7 @@ body {
     font-feature-settings: "frac", "salt";
 }
 p {
-    color: var(--body-color);
+    color: var(--system-color);
 }
 
 p,
@@ -90,7 +90,7 @@ h6 {
     font-family: var(--font-family--title);
     font-weight: var(--font-wight--bolder);
     margin-bottom: var(--spacem-xs);
-    line-height: 1.2;
+    line-height: 1.25;
 }
 
 h1 {
