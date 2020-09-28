@@ -209,12 +209,12 @@ Or by removing the *key/value pair* altogether
 
 ```json
 "commands": [
-    {
+   {
       "name": "God is love",
-			"identifier": "god_is_love",
+      "identifier": "god_is_love",
       "script": "God_Is_Love.js"
-    },
-  ]
+   },
+]
 ```
 
 ---
