@@ -1,12 +1,14 @@
 <template>
   <Layout :show-logo="true" :show-posts="true">
     <section class="about">
+      <p id="my-name">Hi There 👋 <br>My Name Is</p>
       <h1 class="about__title-1">
         Yonatan <span class="grab-word">Ben Knaan</span>
       </h1>
       <h2 class="about__title-2">
         A design system manager and an alright dude from TLV 🇮🇱
       </h2>
+      <Hr hr-height="var(--spacem-3xs)" hr-margin-bottom="var(--spacem-2xl)" />
       <div class="about__bio-text">
         <div id="the-text">
           <p>
@@ -22,6 +24,12 @@
             I design digital products for a living and build websites, like this
             one, for fun, to explore design in code and to tell short stories.
           </p>
+          <Hr
+            id="hidden-hr"
+            hr-height="var(--spacem-3xs)"
+            hr-margin-top="var(--spacem-2xl)"
+            hr-margin-bottom="var(--spacem-2xl)"
+          />
         </div>
         <ul id="meta-list">
           <li v-for="meta in metas" :key="meta.mess">
@@ -35,10 +43,12 @@
 
 <script>
 import Author from "~/components/Author.vue";
+import Hr from "~/components/Hr.vue";
 
 export default {
   components: {
     Author,
+    Hr,
   },
   metaInfo: {
     title: "About Yonatan Ben Knaan",
@@ -92,7 +102,7 @@ export default {
 }
 .about {
   margin-top: var(--spacem-6xl);
-  max-width: var(--content-width-sm);
+  max-width: var(--content-width-md);
   display: flex;
   flex-direction: column;
 
@@ -100,7 +110,7 @@ export default {
     font-size: var(--font-size-9xl);
   }
   &__title-2 {
-    border-left: var(--spacem-xs) double var(--link-color-highlight);
+    border-left: var(--spacem-xs) double var(--link-color-HL);
     padding: var(--spacem-2xs) 0 var(--spacem-2xs) var(--spacem-xs);
     font-weight: var(--font-wight--bold);
     font-family: var(--font-family--body);
@@ -114,15 +124,12 @@ export default {
     }
     #the-text {
       margin-inline-end: var(--spacem-sm);
-      @include mQ-max($display-size-sm) {
-        margin-bottom: var(--spacem-lg);
-      }
     }
     #meta-list {
       list-style: none;
       margin-left: 0;
       // max-width: calc(var(--spacem-8xl) * 10);
-      min-width: 33%;
+      min-width: 30%;
       font-size: var(--font-size-md);
       li {
         display: flex;
@@ -136,17 +143,6 @@ export default {
     }
   }
 
-  // @include mQ-max($display-size-md) {
-  //   background-color: wheat;
-  // }
-
-  // @include mQ-max($display-size-sm) {
-  //   background-color: salmon;
-  // }
-
-  // @include mQ-max($display-size-xs) {
-  //   background-color: aliceblue;
-  // }
   &__image-cont {
     display: flex;
     flex-direction: row-reverse;
@@ -158,5 +154,34 @@ export default {
     transform: scale(1.35);
     transform-origin: 80% 100%;
   }
+  #hidden-hr {
+    display: none;
+    @include mQ-max($display-size-sm) {
+      display: block;
+    }
+  }
+  #my-name {
+    font-family: "Comic Sans MS";
+    // text-align: center;
+    line-height: 1.1;
+    @include dimmed;
+    transform: rotateZ(-10deg);
+    width: max-content;
+    position: relative;
+    left: calc(var(--spacem-xl) * -1);
+    top: var(--spacem-sm);
+    z-index: -10;
+  }
+  // @include mQ-max($display-size-md) {
+  //   background-color: wheat;
+  // }
+
+  // @include mQ-max($display-size-sm) {
+  //   background-color: salmon;
+  // }
+
+  // @include mQ-max($display-size-xs) {
+  //   background-color: aliceblue;
+  // }
 }
 </style>
