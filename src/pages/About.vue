@@ -1,14 +1,15 @@
 <template>
   <Layout :show-logo="true" :show-posts="true">
     <section class="about">
-      <p id="my-name">Hi There 👋 <br>My Name Is</p>
+      <p id="my-name">Hi There 👋 <br />My Name Is</p>
       <h1 class="about__title-1">
         Yonatan <span class="grab-word">Ben Knaan</span>
       </h1>
       <h2 class="about__title-2">
-        A design system manager and an alright dude from TLV 🇮🇱
+        A design system manager, a mismatched persona and an alright dude from
+        TLV 🇮🇱
       </h2>
-      <Hr hr-height="var(--spacem-3xs)" hr-margin-bottom="var(--spacem-2xl)" />
+      <Hr hr-margin-bottom="var(--spacem-2xl)" />
       <div class="about__bio-text">
         <div id="the-text">
           <p>
@@ -26,7 +27,6 @@
           </p>
           <Hr
             id="hidden-hr"
-            hr-height="var(--spacem-3xs)"
             hr-margin-top="var(--spacem-2xl)"
             hr-margin-bottom="var(--spacem-2xl)"
           />
@@ -161,14 +161,13 @@ export default {
     }
   }
   #my-name {
-    font-family: "Comic Sans MS";
-    // text-align: center;
+    font-family: "Permanent Marker";
     line-height: 1.1;
     @include dimmed;
-    transform: rotateZ(-10deg);
+    transform: rotateZ(-12deg);
     width: max-content;
     position: relative;
-    left: calc(var(--spacem-xl) * -1);
+    left: calc(var(--spacem-md) * -1);
     top: var(--spacem-sm);
     z-index: -10;
   }
