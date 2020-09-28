@@ -1,5 +1,5 @@
 <template>
-    <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
+    <div class="post-card" :class="{'post-card--has-poster' : post.poster}">
         <div class="post-card__header">
             <g-image
                 alt="Cover image"
@@ -31,8 +31,10 @@ export default {
 </script>
 
 <style lang="scss">
+@import "../assets/style/index";
+
 .post-card {
-    margin-bottom: var(--content-space);
+    @include content-box;
     position: relative;
     &__header {
         /* margin: var(--space-2xl); */

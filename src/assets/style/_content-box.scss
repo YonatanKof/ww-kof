@@ -1,11 +1,15 @@
 // Used to wrap content inside a nice box.
-.content-box {
-	background-color: var(--bg-content-color);
-	max-width: var(--content-width-md);
-	margin: 0 auto;
-	transition: background-color 0.6s;
-	padding: var(--content-space);
-	border-radius: var(--radius);
-	box-shadow: var(--shadow-sm);
-	transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
+@mixin content-box {
+    background-color: var(--bg-content-color);
+    max-width: var(--content-width-md);
+    margin: 0 auto;
+    margin-bottom: var(--content-space);
+    &:last-child {
+        margin-bottom: 0;
+    }
+    transition: background-color 0.6s;
+    padding: var(--content-space);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-sm);
+    transition: transform 0.3s, background-color 0.3s, box-shadow 0.6s;
 }

@@ -1,32 +1,32 @@
 <template>
-    <Layout>
-        <Author
-            :show-title="true"
-            v-bind:author-title="$page.post.title"
-            :show-bio-text="true"
-            v-bind:author-bio="$page.post.description"
+  <Layout>
+    <Author
+      :show-title="true"
+      v-bind:author-title="$page.post.title"
+      :show-bio-text="true"
+      v-bind:author-bio="$page.post.description"
+    />
+    <div class="post-title">
+      <!-- <h2 class="post-title__text">{{ $page.post.title }}</h2> -->
+      <PostMeta :post="$page.post" />
+    </div>
+    <div class="post">
+      <div class="post__header">
+        <g-image
+          v-if="$page.post.cover_image"
+          :src="$page.post.cover_image"
+          :alt="$page.post.cover_caption"
         />
-        <div class="post-title">
-            <!-- <h2 class="post-title__text">{{ $page.post.title }}</h2> -->
-            <PostMeta :post="$page.post" />
-        </div>
-        <div class="post content-box">
-            <div class="post__header">
-                <g-image
-                    v-if="$page.post.cover_image"
-                    :src="$page.post.cover_image"
-                    :alt="$page.post.cover_caption"
-                />
-            </div>
-            <div class="post__content" v-html="$page.post.content" />
-            <div class="post__footer">
-                <PostTags :post="$page.post" />
-            </div>
-        </div>
-        <div class="post-comments">
-            <!-- Add comment widgets here -->
-        </div>
-    </Layout>
+      </div>
+      <div class="post__content" v-html="$page.post.content" />
+      <div class="post__footer">
+        <PostTags :post="$page.post" />
+      </div>
+    </div>
+    <div class="post-comments">
+      <!-- Add comment widgets here -->
+    </div>
+  </Layout>
 </template>
 
 <script>
@@ -35,22 +35,22 @@ import PostTags from "~/components/PostTags";
 import Author from "~/components/Author.vue";
 
 export default {
-    components: {
-        Author,
-        PostMeta,
-        PostTags
-    },
-    metaInfo() {
-        return {
-            title: this.$page.post.title + " by " + this.$page.post.author_name,
-            meta: [
-                {
-                    name: "description",
-                    content: this.$page.post.description
-                }
-            ]
-        };
-    }
+  components: {
+    Author,
+    PostMeta,
+    PostTags,
+  },
+  metaInfo() {
+    return {
+      title: this.$page.post.title + " by " + this.$page.post.author_name,
+      meta: [
+        {
+          name: "description",
+          content: this.$page.post.description,
+        },
+      ],
+    };
+  },
 };
 </script>
 
@@ -80,63 +80,63 @@ query Post ($id: ID!) {
 @import "../assets/style/index";
 
 .post-title {
-    padding-bottom: var(--space-xl);
-    text-align: center;
+  padding-bottom: var(--space-xl);
+  text-align: center;
 }
 .post {
-    
+  @include content-box;
+  margin-bottom: 0;
+  @include mQ-max($display-size-xs) {
+    // Remove padding on small screens
+    margin: 0 calc(var(--content-space) * -1);
+    border-radius: 0;
+  }
+  &__header {
+    /* width: calc(100% + var(--space) * 2); */
+    margin-left: calc(var(--space-2xl) * -1);
+    margin-right: calc(var(--space-2xl) * -1);
+    margin-bottom: var(--space-md);
+    margin-top: calc(var(--space-2xl) * -1);
+    overflow: hidden;
+    border-radius: var(--radius) var(--radius) 0 0;
     @include mQ-max($display-size-xs) {
-        // Remove padding on small screens
-        margin: 0 calc(var(--content-space) * -1);
-        border-radius: 0;
+      // Remove border-radius on small screens
+      border-radius: 0;
     }
-    margin-bottom: var(--space-xl);
-    &__header {
-        /* width: calc(100% + var(--space) * 2); */
-        margin-left: calc(var(--space-2xl) * -1);
-        margin-right: calc(var(--space-2xl) * -1);
-        margin-bottom: var(--space-md);
-        margin-top: calc(var(--space-2xl) * -1);
-        overflow: hidden;
-        border-radius: var(--radius) var(--radius) 0 0;
-        @include mQ-max($display-size-xs) {
-            // Remove border-radius on small screens
-            border-radius: 0;
-        }
-        img {
-            width: 100%;
-        }
-        &:empty {
-            display: none;
-        }
+    img {
+      width: 100%;
     }
-    &__content {
-        h1,
-        h2,
-        h3,
-        h4,
-        h5,
-        h6 {
-            margin-top: var(--spacem-md);
-        }
-        :is(h1, h2, h3, h4, h5, h6):first-child {
-            margin-top: 0;
-        }
-        img {
-            width: calc(100% + var(--content-space) * 2);
-            margin-left: calc(var(--content-space) * -1);
-            display: block;
-            max-width: none;
-        }
+    &:empty {
+      display: none;
     }
+  }
+  &__content {
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      margin-top: var(--spacem-md);
+    }
+    :is(h1, h2, h3, h4, h5, h6):first-child {
+      margin-top: 0;
+    }
+    img {
+      width: calc(100% + var(--content-space) * 2);
+      margin-left: calc(var(--content-space) * -1);
+      display: block;
+      max-width: none;
+    }
+  }
 }
 .post-comments {
-    padding: calc(var(--content-space) / 2);
-    &:empty {
-        display: none;
-    }
+  padding: calc(var(--content-space) / 2);
+  &:empty {
+    display: none;
+  }
 }
 .post-author {
-    margin-top: calc(var(--content-space) / 2);
+  margin-top: calc(var(--content-space) / 2);
 }
 </style>
