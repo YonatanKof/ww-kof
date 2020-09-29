@@ -167,8 +167,8 @@ export default {
     transform: rotateZ(-12deg);
     width: max-content;
     position: relative;
-    left: calc(var(--spacem-md) * -1);
-    top: var(--spacem-sm);
+    left: calc(var(--space-md) * -1);
+    top: var(--space-sm);
     z-index: -10;
   }
   // @include mQ-max($display-size-md) {
