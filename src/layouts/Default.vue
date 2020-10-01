@@ -6,7 +6,7 @@
       </div>
       <div class="header__right">
         <g-link class="nav__link" to="/about/">About</g-link>
-        <g-link v-if="showPosts" class="nav__link" to="/posts/">Content</g-link>
+        <g-link v-if="showPosts" class="nav__link" to="/posts/">Posts</g-link>
       </div>
     </header>
     <main class="main">
