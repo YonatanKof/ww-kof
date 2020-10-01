@@ -1,6 +1,8 @@
 ## WWK
 
-Just another website using **Gridsome** 🙈
+Just another website using **Gridsome** 🙈.
+
+Check it out on [world wide web](https://ww-kof-dev.netlify.app/).
 
 > `siteName:` World Wide Kof
 
