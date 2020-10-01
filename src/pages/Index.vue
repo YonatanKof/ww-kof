@@ -3,9 +3,10 @@
         <!-- Author intro -->
         <Author
             :show-title="true"
-            v-bind:author-title="$static.metadata.siteName"
+            :author-title="$static.metadata.siteName"
             :show-bio-text="true"
-            author-bio="Life of an ape 🙈🙉🙊"
+            author-bio="As a great ape I love helping individuals and organizations getting 💩 done, while keeping it agile and keeping it real. I like to create things from nothing, concepts form talks, products from ideas"
+            
         />
     </Layout>
 </template>
