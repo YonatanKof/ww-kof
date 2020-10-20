@@ -4,7 +4,7 @@ author_name: Yonatan Ben Knnan
 urlname: hello-gridsome
 date: 2019-02-07
 updated: 2019-02-07
-published: true
+published: false
 cover_image: ./images/gun_v1_0009.svg
 cover_caption: Polls on the beach
 tags: ['Markdown', 'Releases']
